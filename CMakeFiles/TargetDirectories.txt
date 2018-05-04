@@ -1,0 +1,3 @@
+/home/jm/Pulpit/semestr_vi/programowanie/Sortowania/CMakeFiles/rebuild_cache.dir
+/home/jm/Pulpit/semestr_vi/programowanie/Sortowania/CMakeFiles/Program.dir
+/home/jm/Pulpit/semestr_vi/programowanie/Sortowania/CMakeFiles/edit_cache.dir
