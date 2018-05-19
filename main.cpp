@@ -37,33 +37,35 @@ int main(){
                 QuickSort quick;
                 quick.implement_random(file_before_sort);
                 vec_quick = quick.get_data(file_before_sort);
-                std::cout << "how many?"; cin >> liczba;
+		for(int liczba = 1; liczba < 20000; liczba+= 100){
                 duration = quick.quick_sort(vec_quick, liczba);
                 quick.data_time(liczba, duration);
                 quick.set_data(vec_quick, file_after_sort, liczba);
+		}
         } break;
 
         case 2: {
                 HeapSort heap;
                 heap.implement_random(file_before_sort);
                 vec_heap = heap.get_data(file_before_sort);
-                std::cout << "how many? "; cin >> liczba;
+                for(int liczba = 1; liczba < 20000; liczba += 100){
                 duration = heap.heap_sort(vec_heap, liczba);
                 heap.data_time(liczba, duration);
                 heap.set_data(vec_heap, file_after_sort, liczba);
-                heap.display_heap_sort(vec_heap, "HEAP: ");
+             //   heap.display_heap_sort(vec_heap, "HEAP: ");
+		}
         } break;
 
         case 3: {
                 BucketSort bucket;
                 bucket.implement_random(file_before_sort);
                 vec_bucket = bucket.get_data(file_before_sort);
-                std::cout << "how many? "; std::cin >> liczba;
+                for(int liczba = 1; liczba < 20000; liczba += 100)
                 duration = bucket.bucket_sort(vec_bucket, liczba);
                 bucket.data_time(liczba, duration);
                 bucket.set_data(vec_bucket, file_after_sort, liczba);
-                bucket.display_bucket_sort(vec_bucket, "BUCKET: ");
-                
+              //  bucket.display_bucket_sort(vec_bucket, "BUCKET: ");
+        
         } break;
 
         case 4: return 0; break;

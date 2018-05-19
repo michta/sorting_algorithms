@@ -17,6 +17,8 @@ private:
     int liczba{0};
     
 public:
+ ofstream file;
+
     QuickSort(){}
    ~QuickSort(){}
 
@@ -83,12 +85,11 @@ void QuickSort::implement_random(string plik)
     }
     void QuickSort::set_data(std::vector<double> vec, std::string plik, int liczba)
     {
-         ofstream file;
-
+        
          file.open(plik, std::ofstream::out | std::ofstream::trunc);
     
 
-          for(int i = 0; i < liczba; ++i)
+         for(int i = 0; i < liczba; ++i)
              file << vec[i] << "\n";
           
        file.close();
@@ -98,7 +99,7 @@ void QuickSort::implement_random(string plik)
     {
         ofstream file;
        
-        file.open("quick_time.csv", ios::out | ios::app);
+        file.open("quick_time.csv");
         file << number << "," << val;
         file << "\n";
         file.close();

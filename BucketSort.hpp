@@ -116,7 +116,7 @@ void BucketSort::implement_random(std::string plik)
     {
         ofstream file;
        
-        file.open("bucket_time.csv", ios::out | ios::app);
+        file.open("bucket_time.csv");
         file << number << "," << val;
         file << "\n";
         file.close();

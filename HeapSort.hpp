@@ -73,11 +73,11 @@ void HeapSort::implement_random(std::string plik)
 
     double HeapSort::heap_sort(std::vector<double>& vec, int liczba)
     {
-        std::make_heap(vec.begin(), vec.end());
+        std::make_heap(vec.begin(), vec.begin() + liczba);
         double duration{0};
         double start{0};
         start = clock();
-        std::sort_heap(vec.begin(), vec.end());
+        std::sort_heap(vec.begin(), vec.begin() + liczba);
         duration = (clock() - start) / (double)CLOCKS_PER_SEC;
         std::cout << "CZAS: " << duration << "\n";
         return duration;
